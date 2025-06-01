@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Noto+Kufi+Arabic:wght@100..900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Noto+Kufi+Arabic:wght@100..900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap');
 
 :root {
     --primary-color: #333;
@@ -7,8 +8,11 @@
     --text-light: #cacaca;
     --text-dark: #333;
     --header-bg: #40e0d0;
-    --footer-bg: #7fffd4;
-    --font-family: 'Funnel Sans', sans-serif;
+    --footer-bg: #40e0d0;
+    --font-family: 'Montserrat', sans-serif;
+    /* --font-family: 'Funnel Sans', sans-serif; */
+    
+    
 }
 
 * {
@@ -258,7 +262,7 @@ social-links a:hover {
 
 footer {
     background: var(--footer-bg);
-    color: var(--text-light);
+    color: var(--text-dark);
     text-align: center;
     padding: 2rem 0;
     margin-top: 40px;
