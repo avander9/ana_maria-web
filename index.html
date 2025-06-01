@@ -5,9 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ana Maria Brito</title>
+    <meta name="description"
+        content="Sitio web personal de Ana Maria Brito, artista plástico. Explora mi galería de obras, conoce más sobre mí y contacta para colaboraciones.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
     <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -25,7 +29,29 @@
     </header>
 
     <main>
-        <section id="home" class="hero">
+        <!-- <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Bienvenido a mi Mundo de Color y Forma</h1>
+                <p>Explora mi pasión a través de mis creaciones artísticas.</p>
+                <a href="#gallery" class="btn">Ver Obras</a>
+            </div>
+        </section> -->
+
+                <section id="home" class="carousel-section">
+            <div class="carousel-container">
+                <div class="carousel-images">
+                    <img src="./content/art_1.jpeg" alt="Imagen Carrusel 1" class="carousel-image active">
+                    <img src="./content/art_2.webp" alt="Imagen Carrusel 2" class="carousel-image">
+                    <img src="./content/art_3.webp" alt="Imagen Carrusel 3" class="carousel-image">
+                </div>
+                <button class="carousel-button prev">&#10094;</button>
+                <button class="carousel-button next">&#10095;</button>
+                <div class="carousel-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
             <div class="hero-content">
                 <h1>Bienvenido a mi Mundo de Color y Forma</h1>
                 <p>Explora mi pasión a través de mis creaciones artísticas.</p>

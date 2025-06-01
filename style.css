@@ -1,11 +1,9 @@
-/* Importar fuentes de Google Fonts (opcional, puedes elegir otras) */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap');
 
-/* --- Estilos Generales --- */
 :root {
-    --primary-color: #333; /* Color principal de texto y algunos elementos */
-    --secondary-color: #f4f4f4; /* Color de fondo claro */
-    --accent-color: #A36B6C; /* Color de acento para botones, etc. */
+    --primary-color: #333;
+    --secondary-color: #f4f4f4;
+    --accent-color: #A36B6C;
     --text-light: #fff;
     --text-dark: #333;
     --header-bg: rgba(0, 0, 0, 0.8);
@@ -19,7 +17,7 @@
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
     line-height: 1.6;
     color: var(--primary-color);
     background-color: var(--secondary-color);
@@ -68,11 +66,10 @@ h1, h2, h3 {
 }
 
 .btn:hover {
-    background: darken(var(--accent-color), 10%); /* Simula un color más oscuro al pasar el ratón */
+    background: darken(var(--accent-color), 10%);
     opacity: 0.9;
 }
 
-/* --- Header y Navegación --- */
 header {
     background: var(--header-bg);
     color: var(--text-light);
@@ -118,9 +115,8 @@ nav ul li a:hover {
     color: var(--accent-color);
 }
 
-/* --- Sección Hero (Inicio) --- */
 .hero {
-    background: url('https://via.placeholder.com/1500x800?text=Fondo+Artista') no-repeat center center/cover; /* Reemplaza con una imagen tuya */
+    background: url('https://via.placeholder.com/1500x800?text=Fondo+Artista') no-repeat center center/cover;
     color: var(--text-light);
     height: 100vh;
     display: flex;
@@ -128,10 +124,10 @@ nav ul li a:hover {
     align-items: center;
     text-align: center;
     position: relative;
-    padding-top: 80px; /* Para que el contenido no quede debajo del header fijo */
+    padding-top: 80px;
 }
 
-.hero::before { /* Capa de superposición para mejor legibilidad del texto */
+.hero::before {
     content: '';
     position: absolute;
     top: 0;
@@ -159,7 +155,6 @@ nav ul li a:hover {
     margin-bottom: 2rem;
 }
 
-/* --- Sección Galería --- */
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -183,8 +178,8 @@ nav ul li a:hover {
 
 .gallery-item img {
     width: 100%;
-    height: 300px; /* Altura fija para las imágenes */
-    object-fit: cover; /* Recorta la imagen para que encaje */
+    height: 300px;
+    object-fit: cover;
     display: block;
 }
 
@@ -205,7 +200,6 @@ nav ul li a:hover {
     margin-bottom: 0.5rem;
 }
 
-/* --- Sección Sobre Mí --- */
 .about-content {
     display: flex;
     flex-direction: column;
@@ -241,7 +235,6 @@ nav ul li a:hover {
     margin-bottom: 0.5rem;
 }
 
-/* --- Sección Contacto --- */
 .contact-form {
     max-width: 600px;
     margin: 30px auto;
@@ -269,7 +262,7 @@ nav ul li a:hover {
 }
 
 .contact-form button {
-    align-self: center; /* Centra el botón */
+    align-self: center;
 }
 
 .social-links {
@@ -285,12 +278,11 @@ nav ul li a:hover {
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.social-links a:hover {
+social-links a:hover {
     color: var(--accent-color);
     transform: scale(1.1);
 }
 
-/* --- Footer --- */
 footer {
     background: var(--footer-bg);
     color: var(--text-light);
@@ -299,7 +291,6 @@ footer {
     margin-top: 40px;
 }
 
-/* --- Responsive Design (Media Queries) --- */
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
@@ -307,12 +298,12 @@ footer {
 
     nav ul {
         margin-top: 1rem;
-        flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+        flex-wrap: wrap;
         justify-content: center;
     }
 
     nav ul li {
-        margin: 0 10px 10px 10px; /* Ajusta los márgenes para pantallas pequeñas */
+        margin: 0 10px 10px 10px;
     }
 
     .hero-content h1 {
@@ -328,15 +319,15 @@ footer {
     }
 
     .gallery-grid {
-        grid-template-columns: 1fr; /* Una columna en móviles */
+        grid-template-columns: 1fr;
     }
 
     .about-content {
-        flex-direction: column; /* Apila la imagen y el texto en pantallas pequeñas */
+        flex-direction: column;
         text-align: center;
     }
     .about-text {
-        padding: 0 20px; /* Añade padding para mejor lectura en móviles */
+        padding: 0 20px;
     }
     .profile-pic {
         width: 200px;
@@ -357,7 +348,101 @@ footer {
     }
 }
 
-/* Estilos para el efecto de scroll suave (opcional, requiere JavaScript) */
 html {
     scroll-behavior: smooth;
+}
+
+.carousel-section {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-images {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+    display: none;
+}
+
+.carousel-image.active {
+    display: block;
+}
+
+.hero-content {
+    position: absolute;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1.5em;
+    z-index: 2;
+    border-radius: 5px;
+    user-select: none;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+.carousel-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #717171;
+}
+
+main {
+    padding-top: 70px;
 }
